@@ -28,12 +28,43 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+    <!--Google Maps API begin-->
+
+    <!--<script type="text/javascript"-->
+    <!--  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0VCtdXj1cG4l85JPuhf1pZc691DYE9TA">-->
+    <!--</script>-->
+    <!--<script type="text/javascript">-->
+    <!--  function initialize() {-->
+    <!--    var mapOptions = {-->
+    <!--      center: { lat: 30.3715358, lng: -97.7243496},-->
+    <!--      zoom: 5-->
+    <!--    };-->
+    <!--    var map = new google.maps.Map(document.getElementById('map-canvas'),-->
+    <!--        mapOptions);-->
+    <!--  }-->
+    <!--  google.maps.event.addDomListener(window, 'load', initialize);-->
+    <!--</script>-->
+    <!--Google Maps API end-->
 </head>
 
 <body>
+    <!--yelp-->
+    <!--<script>(function() { var s = document.createElement("script");s.async = true;s.onload = s.onreadystatechange = function(){getYelpWidget("http://www.yelp.com/biz/zookeeper-austin","100","RED","y","y","3");};s.src='http://chrisawren.com/widgets/yelp/yelpv2.js' ;var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();</script>-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!--Facebook comments plugin-->
+   <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="brand">ZOOKEEPER</div>
-    <div class="address-bar">The Specialty Stores at Furniture Row 9012 Research Blvd | Austin, TX 78758 | (512) 453-8800</div>
+    <!--<div class="brand">ZOOKEEPER</div>-->
+    <!--<div class="address-bar">The Specialty Stores at Furniture Row 9012 Research Blvd | Austin, TX 78758 | (512) 453-8800</div>-->
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -56,11 +87,11 @@
                         <a href="index">Home</a>
                     </li>
                     <li>
-                        <a href="about">About</a>
+                        <a href="pets">Pets</a>
                     </li>
-                    <li>
-                        <a href="blog">Blog</a>
-                    </li>
+                    <!--<li>-->
+                    <!--    <a href="products">Products</a>-->
+                    <!--</li>-->
                     <li>
                         <a href="contact">Contact</a>
                     </li>
@@ -82,72 +113,115 @@
                     </h2>
                     <hr>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8" >
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+                    <!--Google Maps API html-->
+                    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13769.057411698745!2d-97.72339469097376!3d30.37185049565729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cb9699401d45%3A0x15cff30c89d7efa9!2sZookeeper!5e0!3m2!1sen!2sus!4v1434652410220" ></iframe>
+
+
                 </div>
-                <div class="col-md-4">
-                    <p>Phone:
-                        <strong>(512) 453-8800</strong>
+                <!--<div class="col-md-4">-->
+                <!--    <p>-->
+                <!--        <img src="../static/img/zookeeper_fronts.png" alt="ZooKeeper Store" style="width:340px;height:250px;">-->
+                <!--    </p>-->
+                <!--</div>-->
+                 <div class="col-md-4">
+                    <p><strong>Phone:</strong>
+                        <strong><a href="tel:+15555551212">(512) 453-8800</a></strong>
                     </p>
                     <!--<p>Email:-->
                     <!--    <strong><a href="mailto:name@example.com">name@example.com</a></strong>-->
                     <!--</p>-->
-                    <p>Address:
-                        <strong>The Specialty Stores at Furniture Row 9012 Research Blvd
-                            <br>Austin, TX 78758</strong>
+                    <p><strong>Address:</strong><br>
+                        9012 Research Blvd (Hwy 183 & Burnet Road), Austin, Texas 78758
+                    </p>
+                    <p><strong>Store Hours:</strong>
+                        <table style="font-size:125%;">
+                              <tr>
+                                <td style = "font-weight: 600;" >Mon - Thu: </td>
+                                <td>   10:00 am - 8:00 pm</td>
+                            </tr>
+                            <tr>
+                                <td style = "font-weight: 600;" >Fri: </td>
+                                <td>   10:00 am - 8:30 pm</td>
+                            </tr>
+                            <tr>
+                                <td style = "font-weight: 600;" >Sat: </td>
+                                <td>   10:00 am - 7:00 pm</td>
+                            </tr>
+                            <tr>
+                                <td style = "font-weight: 600;" >Sat: </td>
+                                <td>   12:00 pm - 6:00 pm</td>
+                            </tr>
+
+                        </table>
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <div class="fb-like" data-href="https://www.facebook.com/pages/Zookeeper/162861187065325?sk=timeline" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    </p>
+                    <br>
+                    <p><!-- Place this tag where you want the widget to render. -->
+                        <div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/110184646040499942008" data-rel="publisher"></div>
                     </p>
                 </div>
                 <div class="clearfix"></div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Contact
-                        <strong>form</strong>
-                    </h2>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
-                    <form role="form">
-                        <div class="row">
-                            <div class="form-group col-lg-4">
-                                <label>Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Email Address</label>
-                                <input type="email" class="form-control">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control">
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" rows="6"></textarea>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <!--<div class="row">-->
+        <!--    <div class="box">-->
+        <!--        <div class="col-lg-12">-->
+        <!--            <hr>-->
+        <!--            <h2 class="intro-text text-center">Contact-->
+        <!--                <strong>form</strong>-->
+        <!--            </h2>-->
+        <!--            <hr>-->
+                    <!--facebook-->
+        <!--            <div id='yelpwidget'></div>-->
+
+                    <!--<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-post" data-href="https://www.facebook.com/whitney.prall/posts/10102043789845815:0" data-width="500"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/whitney.prall/posts/10102043789845815:0"><p>This is by far the best pet store I&#039;ve ever been to! The staff is incredibly friendly and knowledgeable. I wish I knew...</p>Posted by <a href="https://www.facebook.com/whitney.prall">Whitney Adams</a> on <a href="https://www.facebook.com/whitney.prall/posts/10102043789845815:0">Saturday, May 9, 2015</a></blockquote></div></div>-->
+
+                    <!--<div class="fb-comments" data-href="https://www.facebook.com/pages/Zoo-Keeper-Exotic-Pets/118442081584442?sk=reviews" data-numposts="5"></div>-->
+                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>-->
+                    <!--<form role="form">-->
+                    <!--    <div class="row">-->
+                    <!--        <div class="form-group col-lg-4">-->
+                    <!--            <label>Name</label>-->
+                    <!--            <input type="text" class="form-control">-->
+                    <!--        </div>-->
+                    <!--        <div class="form-group col-lg-4">-->
+                    <!--            <label>Email Address</label>-->
+                    <!--            <input type="email" class="form-control">-->
+                    <!--        </div>-->
+                    <!--        <div class="form-group col-lg-4">-->
+                    <!--            <label>Phone Number</label>-->
+                    <!--            <input type="tel" class="form-control">-->
+                    <!--        </div>-->
+                    <!--        <div class="clearfix"></div>-->
+                    <!--        <div class="form-group col-lg-12">-->
+                    <!--            <label>Message</label>-->
+                    <!--            <textarea class="form-control" rows="6"></textarea>-->
+                    <!--        </div>-->
+                    <!--        <div class="form-group col-lg-12">-->
+                    <!--            <input type="hidden" name="save" value="contact">-->
+                    <!--            <button type="submit" class="btn btn-default">Submit</button>-->
+                    <!--        </div>-->
+                    <!--    </div>-->
+                    <!--</form>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
 
     </div>
-    <!-- /.container -->
+     <!--/.container -->
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Zoo Keeper 2015</p>
                 </div>
             </div>
         </div>
@@ -160,5 +234,4 @@
     <script src="../static/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
